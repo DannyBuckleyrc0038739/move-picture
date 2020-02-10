@@ -24,26 +24,33 @@ namespace move_picture
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
+            if (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 20, pictureBox1.Location.Y);
+            }
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
+            if (pictureBox1.Location.X > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 20, pictureBox1.Location.Y);
+            }
         }
-
         private void Button3_Click(object sender, EventArgs e)
         {
-
-            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);// Always put the X first in the code.
+            if (pictureBox1.Location.Y + 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);// Always put the X first in the code.
+            }
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-
-            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            if (pictureBox1.Location.Y > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            }
         }
-
         private void PictureBox1_Click(object sender, EventArgs e)
         {
 
